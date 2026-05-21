@@ -45,6 +45,7 @@ function Login() {
               className="w-full border px-4 py-2 rounded focus:outline-none focus:border-green-700"
               placeholder="Enter your password"
               required
+              
             />
           </div>
           <button type="submit" className="w-full bg-green-700 text-white py-2 rounded font-bold hover:bg-green-800">
