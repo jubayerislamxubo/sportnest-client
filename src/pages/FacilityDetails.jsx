@@ -121,6 +121,7 @@ function FacilityDetails() {
           <button type="submit" className="w-full bg-green-700 text-white py-2 rounded font-bold hover:bg-green-800">
             Confirm Booking
           </button>
+          
         </form>
       </div>
     </div>
