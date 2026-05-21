@@ -15,7 +15,7 @@ function ManageFacilities() {
       navigate('/login')
       return
     }
-    axios.get(`http://:5000/facilities/owner/${user.email}`, { withCredentials: true })
+    axios.get(`https://sportnest-server-ih6r.onrender.com/facilities/owner/${user.email}`, { withCredentials: true })
       .then(res => {
         setFacilities(res.data)
         setLoading(false)
@@ -29,7 +29,7 @@ function ManageFacilities() {
   const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this facility?')) return
     try {
-      await axios.delete(`http://:5000/facilities/${id}`, { withCredentials: true })
+      await axios.delete(`https://sportnest-server-ih6r.onrender.com/facilities/${id}`, { withCredentials: true })
       setFacilities(facilities.filter(f => f._id !== id))
       toast.success('Facility deleted!')
     } catch (err) {
@@ -40,7 +40,7 @@ function ManageFacilities() {
   const handleUpdate = async (e) => {
     e.preventDefault()
     try {
-      await axios.put(`http://:5000/facilities/${editFacility._id}`, editFacility, { withCredentials: true })
+      await axios.put(`https://sportnest-server-ih6r.onrender.com/facilities/${editFacility._id}`, editFacility, { withCredentials: true })
       setFacilities(facilities.map(f => f._id === editFacility._id ? editFacility : f))
       setEditFacility(null)
       toast.success('Facility updated!')

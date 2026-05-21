@@ -13,7 +13,7 @@ function FacilityDetails() {
   const [hours, setHours] = useState(1)
 
   useEffect(() => {
-    axios.get(`http://:5000/facilities/${id}`)
+    axios.get(`https://sportnest-server-ih6r.onrender.com/facilities/${id}`)
       .then(res => {
         setFacility(res.data)
         setLoading(false)
@@ -32,7 +32,7 @@ function FacilityDetails() {
       return
     }
     try {
-      await axios.post('http://:5000/bookings', {
+      await axios.post('https://sportnest-server-ih6r.onrender.com/bookings', {
         facility_id: id,
         user_email: user.email,
         booking_date: bookingDate,

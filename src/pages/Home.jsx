@@ -7,7 +7,8 @@ function Home() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    axios.get('http://:5000/facilities')
+    
+    axios.get('https://sportnest-server-ih6r.onrender.com/facilities')
       .then(res => {
         setFacilities(res.data)
         setLoading(false)
@@ -102,9 +103,7 @@ function Home() {
             <h3 className="font-bold mb-2">Play</h3>
             <p className="text-gray-600">Enjoy your game!</p>
           </div>
-
         </div>
-        
       </div>
     </div>
   )

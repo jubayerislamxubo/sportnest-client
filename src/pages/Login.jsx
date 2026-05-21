@@ -11,7 +11,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.post('http://:5000/auth/login', { email, password }, { withCredentials: true })
+      const res = await axios.post('https://sportnest-server-ih6r.onrender.com/auth/login', { email, password }, { withCredentials: true })
       localStorage.setItem('user', JSON.stringify(res.data.user))
       toast.success('Login successful!')
       navigate('/')
