@@ -102,6 +102,7 @@ function Home() {
             <h3 className="font-bold mb-2">Play</h3>
             <p className="text-gray-600">Enjoy your game!</p>
           </div>
+          
         </div>
       </div>
     </div>
