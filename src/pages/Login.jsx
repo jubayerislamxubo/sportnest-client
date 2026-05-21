@@ -27,6 +27,7 @@ function Login() {
         <form onSubmit={handleLogin}>
           <div className="mb-4">
             <label className="block text-gray-700 mb-2">Email</label>
+            
             <input
               type="email"
               value={email}
@@ -38,7 +39,7 @@ function Login() {
           </div>
           <div className="mb-6">
             <label className="block text-gray-700 mb-2">Password</label>
-            
+
             <input
               type="password"
               value={password}
