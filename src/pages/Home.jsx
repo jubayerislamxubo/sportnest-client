@@ -7,7 +7,7 @@ function Home() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    axios.get('http://localhost:5000/facilities')
+    axios.get('http://:5000/facilities')
       .then(res => {
         setFacilities(res.data)
         setLoading(false)

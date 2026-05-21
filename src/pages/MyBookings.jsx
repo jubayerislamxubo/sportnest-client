@@ -14,7 +14,7 @@ function MyBookings() {
       navigate('/login')
       return
     }
-    axios.get(`http://localhost:5000/bookings/${user.email}`, { withCredentials: true })
+    axios.get(`http://:5000/bookings/${user.email}`, { withCredentials: true })
       .then(res => {
         setBookings(res.data)
         setLoading(false)
@@ -28,7 +28,7 @@ function MyBookings() {
   const handleCancel = async (id) => {
     if (!window.confirm('Are you sure you want to cancel this booking?')) return
     try {
-      await axios.delete(`http://localhost:5000/bookings/${id}`, { withCredentials: true })
+      await axios.delete(`http://:5000/bookings/${id}`, { withCredentials: true })
       setBookings(bookings.filter(b => b._id !== id))
       toast.success('Booking cancelled!')
     } catch (err) {

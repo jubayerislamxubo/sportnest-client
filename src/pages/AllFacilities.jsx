@@ -10,7 +10,7 @@ function AllFacilities() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/facilities?search=${search}&type=${filterType}`)
+    axios.get(`http://:5000/facilities?search=${search}&type=${filterType}`)
       .then(res => {
         setFacilities(res.data)
         setLoading(false)

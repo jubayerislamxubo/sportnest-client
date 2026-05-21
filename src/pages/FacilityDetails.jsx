@@ -13,7 +13,7 @@ function FacilityDetails() {
   const [hours, setHours] = useState(1)
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/facilities/${id}`)
+    axios.get(`http://:5000/facilities/${id}`)
       .then(res => {
         setFacility(res.data)
         setLoading(false)
@@ -32,7 +32,7 @@ function FacilityDetails() {
       return
     }
     try {
-      await axios.post('http://localhost:5000/bookings', {
+      await axios.post('http://:5000/bookings', {
         facility_id: id,
         user_email: user.email,
         booking_date: bookingDate,

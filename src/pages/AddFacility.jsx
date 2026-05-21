@@ -30,7 +30,7 @@ function AddFacility() {
     }
     setLoading(true)
     try {
-      await axios.post('http://localhost:5000/facilities', {
+      await axios.post('http://:5000/facilities', {
         ...formData,
         price_per_hour: Number(formData.price_per_hour),
         capacity: Number(formData.capacity),

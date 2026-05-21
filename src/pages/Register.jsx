@@ -27,7 +27,7 @@ function Register() {
     }
 
     try {
-      await axios.post('http://localhost:5000/auth/register', { name, email, photo, password })
+      await axios.post('http://:5000/auth/register', { name, email, photo, password })
       toast.success('Registration successful! Please login.')
       navigate('/login')
     } catch (err) {
