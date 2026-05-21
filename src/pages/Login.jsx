@@ -38,6 +38,7 @@ function Login() {
           </div>
           <div className="mb-6">
             <label className="block text-gray-700 mb-2">Password</label>
+            
             <input
               type="password"
               value={password}
@@ -55,7 +56,7 @@ function Login() {
         <p className="text-center mt-4 text-gray-600">
           Don't have an account? <Link to="/register" className="text-green-700 font-bold">Register</Link>
         </p>
-        
+
       </div>
 
     </div>
