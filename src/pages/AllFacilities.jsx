@@ -75,6 +75,7 @@ function AllFacilities() {
                   onClick={() => handleBookNow(facility._id)}
                   className="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 w-full"
                 >
+                  
                   Book Now
                 </button>
               </div>
